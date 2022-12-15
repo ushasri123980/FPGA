@@ -46,6 +46,6 @@ to <Total number of nodes>-1
 number of lines in the second part is equal to the total number of FPGA connection channels.
 Format:<FPGA id> <FPGA id>
 A sample of the second part is given below.
-  0 3
-1 3
-2 3
+ 0 3
+  1 3
+  2 3
