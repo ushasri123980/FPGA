@@ -6,6 +6,7 @@ using namespace std;
 vector<vector<int>> input;
 void readfile(string filename)
 {
+    
 int word;
     string line;    
 	ifstream inputFile;    
