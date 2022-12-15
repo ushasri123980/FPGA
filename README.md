@@ -69,7 +69,7 @@ A sample input of the final part is given below.<br />
   4 0<br />
   
 ### output Format
-Output the partitioning result in the order of the node id. For each line, the first label is the id of
+5. Output the partitioning result in the order of the node id. For each line, the first label is the id of
 node and the second label is the id of FPGA which it is assigned to.<br />
 Format: node id FPGA id<br />
 A sample output is given below.<br />
@@ -84,5 +84,10 @@ A sample output is given below.<br />
 2 3<br />
 4 0<br />
 
+The figure below shows a feasible partitioning solution for the sample input above. The red nodes
+are fixed to the FPGAs they belong to. In this case, there are two hyperedges ((1, 2, 6) and (2, 3, 5))
+incident with F3 but not fully inside F3. So, the external degree of F3 is 2. The sum of external
+degrees of all FPGAs is 2. <br />
+<img width="209" alt="fp" src="https://user-images.githubusercontent.com/55844419/207855001-38627287-c7df-4e01-8131-e9f84f578c97.png">
 
 
