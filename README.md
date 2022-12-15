@@ -39,12 +39,12 @@ number of nodes        Total number of nets         Total number of fixed nodes 
 A sample of the first part is given below.<br />
 4 3 3 8 5 2
 
-Note that the FPGA indices are from 0 to < Total number of FPGAs> -1. The node indices are from 0
-to <Total number of nodes>-1
+Note that the FPGA indices are from 0 to Total number of FPGAs -1. The node indices are from 0
+to Total number of nodes-1
   
  2. Each line of the second part lists the two FPGAs connected by each FPGA connection channel. The
 number of lines in the second part is equal to the total number of FPGA connection channels.<br />
-Format:<FPGA id> <FPGA id><br />
+Format:FPGA id FPGA id<br />
 A sample of the second part is given below.<br />
  0 3 <br />
   1 3 <br />
@@ -53,7 +53,7 @@ A sample of the second part is given below.<br />
   3. The third part provides the information of the nets. The information of each net is given by a
 separate line where the first label is the id of its source node and the remaining labels are the ids of
 its sink nodes. The number of lines for the third part is equal to the total number of nets.<br />
-Format:<source node id> <sink node id><sink node id>…<br />
+Format:source node id  sink node id  sink node id…<br />
 A sample of the third part is given below.<br />
   0 1 2<br />
 1 2 6<br />
@@ -63,7 +63,7 @@ A sample of the third part is given below.<br />
   4. The final part is the fixed node description. The information of each fixed node is given by a
 separate line where the first label is the id of the fixed node and the second label is the id of the
 FPGA it is assigned to.<br />
-Format:<fixed node id><FPGA id><br />
+Format:fixed node id FPGA id<br />
 A sample input of the final part is given below.<br />
   2 3<br />
   4 0<br />
@@ -71,6 +71,18 @@ A sample input of the final part is given below.<br />
 ### output Format
 Output the partitioning result in the order of the node id. For each line, the first label is the id of
 node and the second label is the id of FPGA which it is assigned to.<br />
-Format: <node id><FPGA id><br />
+Format: node id FPGA id<br />
+A sample output is given below.<br />
+0 3<br />
+1 3<br />
+2 3<br />
+0 1 2<br />
+1 2 6<br />
+2 3 5<br />
+3 4<br />
+6 7<br />
+2 3<br />
+4 0<br />
+
 
 
