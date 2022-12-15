@@ -34,7 +34,7 @@ There are mainly four parts in the input file.
 The first part is a single line listing the total number of FPGAs, total number of FPGA connection
 channels, capacity per FPGA, total number of nodes, total number of nets, and total number of fixed
 nodes. Format:<br />
-"Total number of FPGAs" "\t"     "Total number of FPGA connection channels"          Capacity per FPGA           Total
+Total number of FPGAs     Total number of FPGA connection channels         Capacity per FPGA           Total
 number of nodes        Total number of nets         Total number of fixed nodes <br />
 A sample of the first part is given below.
 Note that the FPGA indices are from 0 to < Total number of FPGAs> -1. The node indices are from 0
