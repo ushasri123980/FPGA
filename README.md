@@ -33,9 +33,9 @@ to two neighboring FPGAs (i.e., (FPGA(u), FPGA(v)) ∈ E’).
 There are mainly four parts in the input file.
 The first part is a single line listing the total number of FPGAs, total number of FPGA connection
 channels, capacity per FPGA, total number of nodes, total number of nets, and total number of fixed
-nodes. Format:
-Total number of FPGAs\tab Total number of FPGA connection channels \tab     Capacity per FPGA   \t    Total
-number of nodes  \t   Total number of nets   \t   Total number of fixed nodes \n
+nodes. Format:<br />
+Total number of FPGAs    Total number of FPGA connection channels      Capacity per FPGA       Total
+number of nodes     Total number of nets      Total number of fixed nodes <br />
 A sample of the first part is given below.
 Note that the FPGA indices are from 0 to < Total number of FPGAs> -1. The node indices are from 0
 to <Total number of nodes>-1
