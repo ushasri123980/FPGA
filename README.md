@@ -28,3 +28,15 @@ exceed the capacity of a FPGA (we assume all FPGAs have the same capacity).
 3. Topology constraints: If node u is the source node of a net and node v is a sink node of the same
 net, then nodes u and v are either assigned to the same FPGA (i.e., FPGA(u) = FPGA(v)) or assigned
 to two neighboring FPGAs (i.e., (FPGA(u), FPGA(v)) ∈ E’).
+
+### Input Format
+There are mainly four parts in the input file.
+The first part is a single line listing the total number of FPGAs, total number of FPGA connection
+channels, capacity per FPGA, total number of nodes, total number of nets, and total number of fixed
+nodes.
+Format:
+< Total number of FPGAs> <Total number of FPGA connection channels> <Capacity per FPGA> <Total
+number of nodes><Total number of nets> <Total number of fixed nodes>
+A sample of the first part is given below.
+Note that the FPGA indices are from 0 to < Total number of FPGAs> -1. The node indices are from 0
+to <Total number of nodes>-1
