@@ -228,15 +228,15 @@ int main()
         cout<<"Number of nets(Total connections between nodes): "<<no_of_nets<<endl;
         cout<<"Number of Fixed Nodes: "<<no_of_fixed_nodes<<endl;
         
-        Graph fpga_ckt(no_of_fpga);
-        Graph nodes_ckt(no_of_nodes);
-        queue<pair<int,int>> q;
-        set<int> set_of_fpga;
-        set<int> fixed_circuit_nodes;
-        set<int> movable_circuit_nodes;
-        map<iPair,set<int>> fpga_map;
-        map<iPair,set<int>> nodes_map;
-        map<int,set<int>> cddt;
+        Graph fpga_ckt(no_of_fpga);    // FPGA graph Gˆ(Eˆ,Vˆ )
+        Graph nodes_ckt(no_of_nodes); //Circuit graph G(E, V ),
+        queue<pair<int,int>> q;       //Fixed node-FPGA pair queue Q
+        set<int> set_of_fpga;        
+        set<int> fixed_circuit_nodes;  // //Vγ The set of fixed circuit nodes
+        set<int> movable_circuit_nodes; //Vλ The set of movable circuit nodes
+        map<iPair,set<int>> fpga_map; //Sˆ(viˆ, x)  The set of FPGAs for viˆ fpga node at a distance<=x
+        map<iPair,set<int>> nodes_map; // S(vi, d) The set of nodes at a distance < d from fixed node vi.
+        map<int,set<int>> cddt; //Cddt(vi) The set of candidate FPGA nodes that circuit node vi can be assigned to
 
     //Formation of graph of connection between Fpga's - FPGA graph Gˆ(Eˆ, Vˆ )
     for(int i=1;i<=no_of_conn_channels;i++) fpga_ckt.addEdge(input[i][0],input[i][1],1);                
